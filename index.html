@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCRIPT X STUDIOS</title>
+    <style>
+        /* --- DESIGN: SCRIPT X STUDIOS (PRETO E CINZA) --- */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            scroll-behavior: smooth;
+        }
+
+        /* Barra de Navegação */
+        nav {
+            position: fixed;
+            top: 0; width: 100%;
+            padding: 25px 50px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid #222;
+        }
+
+        .logo { 
+            font-weight: 900; 
+            font-size: 24px; 
+            letter-spacing: -1px; 
+            text-transform: uppercase;
+        }
+
+        /* Hero Section Atualizado */
+        .hero {
+            height: 50vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: radial-gradient(circle at center, #111 0%, #000 100%);
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 6vw, 4rem);
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: -2px;
+            padding: 0 20px;
+        }
+
+        /* Estilo das Seções */
+        .content-section {
+            padding: 80px 50px;
+        }
+
+        .bg-white { background-color: #fff; color: #000; }
+        .bg-grey { background-color: #f5f5f5; color: #000; }
+        
+        /* BANCO DE DADOS - ESTILO PRETO E CINZA */
+        .bg-database { 
+            background-color: #0a0a0a; 
+            color: #fff; 
+            border-top: 1px solid #1a1a1a;
+            border-bottom: 1px solid #1a1a1a;
+        }
+
+        .section-title {
+            font-size: 32px;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+            border-left: 8px solid currentColor;
+            padding-left: 20px;
+            display: inline-block;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        /* Cards Estilizados */
+        .card {
+            background: transparent;
+            border: 2px solid currentColor;
+            padding: 35px;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            background: #fff;
+            color: #000 !important;
+            box-shadow: 10px 10px 0px rgba(255,255,255,0.1);
+        }
+
+        .bg-white .card:hover, .bg-grey .card:hover {
+            background: #000;
+            color: #fff !important;
+            box-shadow: 10px 10px 0px rgba(0,0,0,0.1);
+        }
+
+        .card h3 {
+            font-size: 22px;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            opacity: 0.7;
+            flex-grow: 1;
+        }
+
+        .btn-action {
+            width: 100%;
+            padding: 12px;
+            background: currentColor;
+            filter: invert(1);
+            color: inherit;
+            border: none;
+            font-weight: 900;
+            text-transform: uppercase;
+            cursor: pointer;
+            font-size: 11px;
+            letter-spacing: 1px;
+        }
+
+        /* Footer */
+        footer {
+            padding: 60px;
+            background: #000;
+            text-align: center;
+        }
+
+        .credits {
+            font-weight: 900;
+            font-size: 12px;
+            opacity: 0.3;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        /* Toast */
+        #toast {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #fff;
+            color: #000;
+            padding: 15px 35px;
+            font-weight: 900;
+            display: none;
+            z-index: 2000;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">SCRIPT X STUDIOS</div>
+    </nav>
+
+    <section class="hero">
+        <p style="letter-spacing: 10px; opacity: 0.5; margin-bottom: 15px;">HUB OFICIAL</p>
+        <h1>scripts X studios / lugar de scripts programas [em beta]</h1>
+    </section>
+
+    <section class="content-section bg-white">
+        <h2 class="section-title">Sites de Pesquisa</h2>
+        <div class="grid">
+            <a href="https://scriptblox.com" target="_blank" class="card">
+                <h3>ScriptBlox</h3>
+                <p>O portal principal para encontrar e compartilhar novos scripts de Roblox.</p>
+                <div style="font-weight: 900; font-size: 12px;">ACESSAR PORTAL →</div>
+            </a>
+        </div>
+    </section>
+
+    <section class="content-section bg-database">
+        <h2 class="section-title">Banco de Dados / Scripts</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Cat Hub</h3>
+                <p>Script oficial para Brookhaven e sistemas de Troll. Estável e potente.</p>
+                <button class="btn-action" onclick="copy('loadstring(game:HttpGet(\'https://raw.githubusercontent.com/oficialclkidd-hub/Cathub/main/README.md\'))()')">COPIAR LOADSTRING</button>
+            </div>
+            <div class="card">
+                <h3>Infinite Yield</h3>
+                <p>O melhor admin script universal para qualquer jogo no Roblox.</p>
+                <button class="btn-action" onclick="copy('loadstring(game:HttpGet(\'https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source\'))()')">COPIAR LOADSTRING</button>
+            </div>
+            <div class="card">
+                <h3>Universal ESP</h3>
+                <p>Interface avançada para visualização de jogadores através das paredes.</p>
+                <button class="btn-action" onclick="copy('loadstring(game:HttpGet(\'https://raw.githubusercontent.com/ic3w0lf22/Unnamed-ESP/master/UnnamedESP.lua\'))()')">COPIAR LOADSTRING</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section bg-grey">
+        <h2 class="section-title">Sites de Programação</h2>
+        <div class="grid">
+            <a href="https://github.com" target="_blank" class="card">
+                <h3>GitHub</h3>
+                <p>Hospede seus arquivos .lua e organize seus repositórios de desenvolvimento.</p>
+                <div style="font-weight: 900; font-size: 12px;">VISITAR GITHUB →</div>
+            </a>
+        </div>
+    </section>
+
+    <section class="content-section bg-white">
+        <h2 class="section-title">Servers do Discord [EM BREVE]</h2>
+        <div class="grid">
+            <div class="card" style="opacity: 0.3; border-style: dashed; cursor: not-allowed;">
+                <h3>Comunidade Script X</h3>
+                <p>Aguarde pelo lançamento do nosso servidor oficial para suporte e chat.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="credits">© 2026 SCRIPT X STUDIOS</div>
+    </footer>
+
+    <div id="toast">CÓDIGO COPIADO!</div>
+
+    <script>
+        function copy(text) {
+            navigator.clipboard.writeText(text);
+            const t = document.getElementById('toast');
+            t.style.display = 'block';
+            setTimeout(() => { t.style.display = 'none'; }, 2000);
+        }
+    </script>
+
+</body>
+</html>
